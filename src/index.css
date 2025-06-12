@@ -1,0 +1,140 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&display=swap');
+
+:root {
+  --background: 240 10% 3.9%; /* Dark blue-gray */
+  --foreground: 0 0% 98%; /* Almost white */
+  
+  --card: 240 10% 10%; /* Slightly lighter dark blue-gray */
+  --card-foreground: 0 0% 98%;
+
+  --popover: 240 10% 3.9%;
+  --popover-foreground: 0 0% 98%;
+
+  --primary: 210 100% 60%; /* Bright blue */
+  --primary-foreground: 240 10% 3.9%;
+
+  --secondary: 280 100% 65%; /* Vibrant purple */
+  --secondary-foreground: 0 0% 98%;
+
+  --muted: 240 5% 25%; /* Muted blue-gray */
+  --muted-foreground: 240 10% 73%; /* Lighter muted blue-gray */
+
+  --accent: 180 100% 50%; /* Cyan / Teal */
+  --accent-foreground: 240 10% 3.9%;
+
+  --destructive: 0 72% 51%; /* Red */
+  --destructive-foreground: 0 0% 98%;
+
+  --border: 240 5% 15%; /* Darker border for subtle separation */
+  --input: 240 5% 15%;
+  --ring: 210 100% 60%; /* Ring for focus states */
+
+  --radius: 0.75rem; /* Slightly larger radius for a softer look */
+}
+
+* {
+  border-color: hsl(var(--border));
+}
+
+body {
+  color: hsl(var(--foreground));
+  background: hsl(var(--background));
+  font-family: 'Inter', sans-serif;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.glassmorphism {
+  background: rgba(255, 255, 255, 0.05); /* Very subtle white */
+  backdrop-filter: blur(12px) saturate(150%);
+  -webkit-backdrop-filter: blur(12px) saturate(150%);
+  border: 1px solid rgba(255, 255, 255, 0.1); /* Subtle border */
+  border-radius: var(--radius);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.1); /* Soft shadow */
+}
+
+.glassmorphism-hover:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 40px 0 rgba(31, 38, 135, 0.15);
+}
+
+.text-gradient-primary {
+  background: linear-gradient(45deg, hsl(var(--primary)), hsl(var(--accent)));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-secondary {
+  background: linear-gradient(45deg, hsl(var(--secondary)), hsl(var(--primary)));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.subtle-glow {
+  box-shadow: 0 0 15px 0px hsla(var(--primary), 0.3), 0 0 30px 0px hsla(var(--accent), 0.2);
+}
+
+.subtle-glow-hover:hover {
+   box-shadow: 0 0 20px 2px hsla(var(--primary), 0.4), 0 0 40px 2px hsla(var(--accent), 0.3);
+}
+
+.background-grid {
+  background-image:
+    linear-gradient(to right, hsla(var(--border) / 0.5) 1px, transparent 1px),
+    linear-gradient(to bottom, hsla(var(--border) / 0.5) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+.floating-light {
+  animation: floatLight 8s ease-in-out infinite;
+}
+
+@keyframes floatLight {
+  0%, 100% { transform: translateY(0px) translateX(0px) scale(1); opacity: 0.3; }
+  25% { transform: translateY(-15px) translateX(10px) scale(1.05); opacity: 0.4; }
+  50% { transform: translateY(0px) translateX(-10px) scale(1); opacity: 0.35; }
+  75% { transform: translateY(10px) translateX(5px) scale(0.95); opacity: 0.25; }
+}
+
+.smooth-scroll-container {
+  scroll-behavior: smooth;
+}
+
+.section-padding {
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+}
+
+@media (min-width: 768px) {
+  .section-padding {
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+  }
+}
+
+.font-heading {
+  font-weight: 700;
+}
+
+.font-subheading {
+  font-weight: 600;
+}
+
+.font-body {
+  font-weight: 400;
+}
+
+.font-caption {
+  font-weight: 300;
+}
