@@ -31,7 +31,7 @@ const AboutSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
         >
-          Desarrollador Frontend Semi-Senior experimentado en creación de interfaces de usuario para todo tipo de sitios web. 
+          Soy un desarrollador Frontend Semi-Senior experimentado en creación de interfaces de usuario para todo tipo de sitios web. 
           Apasionado por el UX Writtig y la búsqueda de <b>equitatividad</b> mediante código eficiente, con el fin de entregar productos digitales de alta accesibilidad e intuitividad.
         </motion.p>
 
@@ -53,7 +53,7 @@ const AboutSection = () => {
             transition={{ duration: 0.6, delay: 0.4, ease: "easeOut" }}
           >
             <p className="text-md text-foreground leading-relaxed font-body">
-              Mi trayectoria se desarrolló trabajando mayormente en proyectos E-Commerce B2B, tanto freelance como empleado para una empresa. Disfruto trabajando en equipo e iterando grupalmente para logral la mejor solución posible. Creo que la diversidad es el punto clave en la creación de soluciones digitales equitativas y funcionales.
+              Mi trayectoria se desarrolló trabajando mayormente en proyectos E-Commerce B2B, tanto freelance como empleado para una empresa. Disfruto trabajando en equipo e iterando grupalmente para lograr la mejor solución posible. Creo que la diversidad es el punto clave en la creación de soluciones digitales equitativas y funcionales.
             </p>
             <p className="text-md text-foreground leading-relaxed font-body">
               Entendiendo el contexto global y priorizando el diseño responsivo busco constantemente optimizar la experiencia del usuario a través de textos claros, performance web y accesibilidad. Mi objetivo es construir aplicaciones que no solo se vean bien, sino que también sean cómodas de usar.

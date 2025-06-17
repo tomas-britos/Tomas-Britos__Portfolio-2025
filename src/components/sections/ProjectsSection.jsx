@@ -7,7 +7,7 @@ const projectsData = [
   {
     title: "Inergio - Energía Renovable",
     description:
-      "Desarrollo frontend completo para una web de servicios de refrigeración y mantenimiento. Líder del equipo de prototipado y diseño UX/UI.",
+      "Desarrollo frontend completo para una web de servicios de refrigeración y mantenimiento. Desempeñé el rol de líder del equipo de prototipado y diseño UX/UI.",
     tech: ["React", "SCSS", "Redux"],
     category: "Business Website",
     link: "https://inergio.com.ar", // ejemplo, reemplaza por el link real
