@@ -83,14 +83,15 @@ const HeroSection = () => {
           variants={itemVariants}
           className="flex flex-col sm:flex-row gap-4 justify-center items-center"
         >
-          <Button
+          <a
             onClick={handleContactClick}
-            className="bg-gradient-to-r from-primary to-accent hover:opacity-90 text-primary-foreground font-semibold py-3 px-8 rounded-md transition-opacity duration-300 text-base subtle-glow-hover"
+            className="bg-gradient-to-r duration-300 flex font-semibold from-primary hover:opacity-80 hover:opacity-90 px-8 py-3 rounded-md subtle-glow-hover text-base text-primary-foreground to-accent transition-opacity"
             size="lg"
+            href="mailto: britosstomas@gmail.com"
           >
             <Mail className="w-5 h-5 mr-2.5" />
             Contáctame
-          </Button>
+          </a>
           <Button
             onClick={handleDownloadCV}
             variant="outline"
