@@ -32,7 +32,7 @@ const ProjectsSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.1 }}
         >
-          <span className="text-gradient-primary">Proyectos Destacados</span>
+          <span className="text-gradient-primary">Proyectos personales destacados</span>
         </motion.h2>
         <motion.p
           className="text-lg text-muted-foreground text-center mb-12 max-w-2xl mx-auto font-body"

@@ -138,3 +138,8 @@ html {
 .font-caption {
   font-weight: 300;
 }
+
+.workedProjectsContainer {
+  column-gap: 0.75rem;
+  row-gap: 1rem;
+}
