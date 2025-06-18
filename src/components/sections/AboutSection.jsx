@@ -23,7 +23,7 @@ const AboutSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.1 }}
         >
-          <span className="text-gradient-primary">Sobre Mí</span>
+          <span className="text-gradient-primary">Sobre mí</span>
         </motion.h2>
         <motion.p 
           className="text-lg text-muted-foreground text-center mb-12 max-w-3xl mx-auto font-body"
