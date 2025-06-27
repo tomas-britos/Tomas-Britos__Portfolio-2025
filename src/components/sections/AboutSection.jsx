@@ -43,8 +43,8 @@ const AboutSection = () => {
           >
             <img  
               className="rounded-lg w-full h-auto object-cover shadow-xl border border-border/30 glassmorphism p-2" 
-              alt="Desarrollador frontend trabajando en un proyecto UX/UI con estética glassmorphism"
-             src="https://images.unsplash.com/photo-1642697283420-194938fcc339" />
+              alt="Foto de Tomás Britos"
+             src="public/images/profile_pic.png" />
           </motion.div>
           <motion.div 
             className="space-y-6"
