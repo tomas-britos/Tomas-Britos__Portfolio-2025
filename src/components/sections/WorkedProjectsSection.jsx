@@ -71,7 +71,7 @@ const WorkedProjectsSection = () => {
           transition={{ duration: 0.5, delay: 0.2 }}
         >
           Dado que mi carrera comenzó directamente en una empresa, he tenido la
-          oportunidad de participar en una variedad de proyectos. Mi aporte fue
+          oportunidad de participar en una amplia variedad de proyectos. Mi aporte fue
           principalmente en diseño, prototipado y fixes visuales. Estos son
           algunos de ellos:
         </motion.p>
