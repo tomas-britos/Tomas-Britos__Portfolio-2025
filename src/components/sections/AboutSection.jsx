@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import AnimatedSection from '@/components/AnimatedSection';
 import { Award, Users, Briefcase } from 'lucide-react';
+import profilePic from '/images/profile_pic.png';
 
 const AboutSection = () => {
   const AnosExperiencia = () => {
@@ -44,7 +45,7 @@ const AboutSection = () => {
             <img  
               className="rounded-lg w-full h-auto object-cover shadow-xl border border-border/30 glassmorphism p-2" 
               alt="Foto de Tomás Britos"
-             src="public/images/profile_pic.png" />
+              src={profilePic} />
           </motion.div>
           <motion.div 
             className="space-y-6"
@@ -81,7 +82,7 @@ const AboutSection = () => {
               <p className="text-2xl font-subheading text-foreground">
                 {typeof stat.value === 'function' ? <stat.value /> : stat.value}
               </p>
-              <p className="text-sm text-muted-foreground font-caption">{stat.label}</p>
+              <p className="text-md text-muted-foreground font-body">{stat.label}</p>
             </motion.div>
           ))}
         </div>
