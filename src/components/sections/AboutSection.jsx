@@ -2,7 +2,6 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import AnimatedSection from '@/components/AnimatedSection';
 import { Award, Users, Briefcase } from 'lucide-react';
-import profilePic from '/images/profile_pic.png';
 
 const AboutSection = () => {
   const AnosExperiencia = () => {
@@ -45,7 +44,7 @@ const AboutSection = () => {
             <img  
               className="rounded-lg w-full h-auto object-cover shadow-xl border border-border/30 glassmorphism p-2" 
               alt="Foto de Tomás Britos"
-              src={profilePic} />
+              src={`${import.meta.env.BASE_URL}images/profile_pic.png`} />
           </motion.div>
           <motion.div 
             className="space-y-6"
