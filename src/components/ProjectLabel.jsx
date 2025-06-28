@@ -1,9 +1,9 @@
 import React from "react";
-import { ExternalLink, Briefcase } from 'lucide-react';
-
+import { ExternalLink, Briefcase } from "lucide-react";
 
 const ProjectLabel = ({ name, role, link, onClick, style }) => {
-  const commonClasses = "block bg-white/5 border border-white/10 rounded-lg p-4 hover:bg-gradient-to-r hover:from-primary/10 hover:to-secondary/10 transition-colors shadow-md";
+  const commonClasses =
+    "block bg-white/5 border border-white/10 rounded-lg p-4 hover:bg-gradient-to-r hover:from-primary/10 hover:to-secondary/10 transition-all duration-300 shadow-md";
 
   if (onClick) {
     return (

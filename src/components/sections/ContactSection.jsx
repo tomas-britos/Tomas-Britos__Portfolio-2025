@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import AnimatedSection from "@/components/AnimatedSection";
 import { Button } from "@/components/ui/button";
 import { toast } from "@/components/ui/use-toast";
-import { Mail, Linkedin, Github, Send } from "lucide-react";
+import { Mail, Linkedin, Github, Send, Home } from "lucide-react";
 import { useForm, ValidationError } from "@formspree/react";
 
 const ContactSection = () => {
@@ -29,7 +29,7 @@ const ContactSection = () => {
 
   if (state.succeeded) {
     return (
-      <AnimatedSection className="section-padding px-4" id="contact">
+      <AnimatedSection className="section-padding px-4">
         <div className="max-w-3xl mx-auto text-center">
           <motion.h2
             className="text-4xl md:text-5xl font-heading mb-6"
@@ -53,8 +53,8 @@ const ContactSection = () => {
   }
 
   return (
-    <AnimatedSection className="section-padding px-4" id="contact">
-      <div className="max-w-3xl mx-auto text-center">
+    <AnimatedSection className="section-padding px-4">
+      <div className="max-w-3xl mx-auto text-center" id="contact">
         <motion.h2
           className="text-4xl md:text-5xl font-heading mb-6"
           initial={{ opacity: 0, y: 20 }}
@@ -145,14 +145,19 @@ const ContactSection = () => {
               errors={state.errors}
             />
           </div>
-          <Button
+          <motion.button
             type="submit"
-            className="w-full bg-gradient-to-r from-primary to-accent hover:opacity-90 text-primary-foreground font-semibold py-3 px-6 rounded-md transition-opacity duration-300 text-base subtle-glow-hover"
+            whileHover={{
+              scale: 1.08,
+              boxShadow: "0 0 16px 2px rgba(99,102,241,0.4)",
+            }}
+            whileTap={{ scale: 0.97 }}
+            className="bg-gradient-to-r duration-300 flex focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary/60 font-semibold from-primary hover:opacity-90 justify-center px-6 py-3 rounded-md subtle-glow-hover text-base text-primary-foreground to-accent transition-opacity w-full"
             disabled={state.submitting}
           >
             <Send className="w-5 h-5 mr-2.5" />
             {state.submitting ? "Enviando..." : "Enviar Mensaje"}
-          </Button>
+          </motion.button>
         </motion.form>
 
         <motion.div
@@ -166,6 +171,7 @@ const ContactSection = () => {
             variant="outline"
             size="icon"
             className="glassmorphism glassmorphism-hover p-3 w-12 h-12 rounded-full border-border/50 hover:border-primary/50 group"
+            title="Ir a mi perfil de LinkedIn"
           >
             <Linkedin className="w-5 h-5 text-muted-foreground group-hover:text-primary transition-colors" />
           </Button>
@@ -174,18 +180,27 @@ const ContactSection = () => {
             variant="outline"
             size="icon"
             className="glassmorphism glassmorphism-hover p-3 w-12 h-12 rounded-full border-border/50 hover:border-secondary/50 group"
+            title="Ir a mi perfil de GitHub"
           >
             <Github className="w-5 h-5 text-muted-foreground group-hover:text-secondary transition-colors" />
           </Button>
           <Button
-            onClick={() =>
-              (window.location.href = "mailto:britosstomas@gmail.com")
-            }
+            onClick={() => (window.location.href = "mailto:britosstomas@gmail.com")}
             variant="outline"
             size="icon"
             className="glassmorphism glassmorphism-hover p-3 w-12 h-12 rounded-full border-border/50 hover:border-accent/50 group"
+            title="Contactarme por tu mailer"
           >
             <Mail className="group-hover:text-primary h-5 text-muted-foreground transition-colors w-5" />
+          </Button>
+          <Button
+            onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+            variant="outline"
+            size="icon"
+            className="glassmorphism glassmorphism-hover p-3 w-12 h-12 rounded-full border-border/50 hover:border-primary/50 group"
+            title="Ir al inicio"
+          >
+            <Home className="w-5 h-5 text-muted-foreground group-hover:text-primary transition-colors" />
           </Button>
         </motion.div>
       </div>

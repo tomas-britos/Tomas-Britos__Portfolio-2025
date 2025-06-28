@@ -11,13 +11,14 @@ const AboutSection = () => {
   const stats = [
     { icon: Award, value: AnosExperiencia, label: "Años de Experiencia" },
     { icon: Briefcase, value: "15+", label: "Proyectos trabajados" },
-    { icon: Users, value: "UX Centrado", label: "En el Usuario" },
+    { icon: Users, value: "Diseño especializado", label: "en el Usuario" },
   ];
 
   return (
-    <AnimatedSection className="section-padding px-4" id="about">
+    <AnimatedSection className="section-padding px-4">
       <div className="max-w-5xl mx-auto">
         <motion.h2
+          id="about"
           className="text-4xl md:text-5xl font-heading text-center mb-6"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -44,7 +45,7 @@ const AboutSection = () => {
             <img  
               className="rounded-lg w-full h-auto object-cover shadow-xl border border-border/30 glassmorphism p-2" 
               alt="Foto de Tomás Britos"
-              src={`${import.meta.env.BASE_URL}images/profile_pic.png`} />
+              src={`${import.meta.env.BASE_URL}images/profile_pic.webp`} />
           </motion.div>
           <motion.div 
             className="space-y-6"
