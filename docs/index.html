@@ -15,8 +15,11 @@
 		<meta property="og:url" content="https://tomasbritos.com.ar/" />
 		<meta property="og:image" content="/public/images/profile_pic.png" />
 		<link rel="canonical" href="https://tomasbritos.com.ar/" />
+		<link rel="manifest" href="/Tomas-Britos__Portfolio-2025/manifest.json" />
+		<meta name="theme-color" content="#6366f1" />
+		<meta name="color-scheme" content="dark light" />
 		<title>Frontend Developer - Tomás Britos</title>
-		<script type="module" crossorigin src="/Tomas-Britos__Portfolio-2025/assets/index-a628261b.js"></script>
+		<script type="module" crossorigin src="/Tomas-Britos__Portfolio-2025/assets/index-d7d0db28.js"></script>
 		<link rel="stylesheet" href="/Tomas-Britos__Portfolio-2025/assets/index-520cdff1.css">
 		<script type="module">
 window.onerror = (message, source, lineno, colno, errorObj) => {
@@ -34,6 +37,7 @@ window.onerror = (message, source, lineno, colno, errorObj) => {
 		message,
 		error: errorDetails
 	}, '*');
+	// No console.error en producción
 };
 </script>
 		<script type="module">
@@ -85,7 +89,10 @@ function handleViteOverlay(node) {
 		<script type="module">
 const originalConsoleError = console.error;
 console.error = function(...args) {
-	originalConsoleError.apply(console, args);
+	// Solo mostrar errores en consola si NO estamos en producción
+	if (location.hostname === 'localhost' || location.hostname === '127.0.0.1') {
+		originalConsoleError.apply(console, args);
+	}
 
 	let errorString = '';
 
@@ -128,17 +135,23 @@ window.fetch = function(...args) {
 				contentType.includes('application/xhtml+xml');
 
 			if (!response.ok && !isDocumentResponse) {
-					const responseClone = response.clone();
-					const errorFromRes = await responseClone.text();
-					const requestUrl = response.url;
+				const responseClone = response.clone();
+				const errorFromRes = await responseClone.text();
+				const requestUrl = response.url;
+				// Solo mostrar errores en consola si NO estamos en producción
+				if (location.hostname === 'localhost' || location.hostname === '127.0.0.1') {
 					console.error(`Fetch error from ${requestUrl}: ${errorFromRes}`);
+				}
 			}
 
 			return response;
 		})
 		.catch(error => {
 			if (!url.match(/.html?$/i)) {
-				console.error(error);
+				// Solo mostrar errores en consola si NO estamos en producción
+				if (location.hostname === 'localhost' || location.hostname === '127.0.0.1') {
+					console.error(error);
+				}
 			}
 
 			throw error;
