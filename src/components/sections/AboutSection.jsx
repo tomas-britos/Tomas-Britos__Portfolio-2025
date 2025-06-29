@@ -45,7 +45,9 @@ const AboutSection = () => {
             <img  
               className="rounded-lg w-full h-auto object-cover shadow-xl border border-border/30 glassmorphism p-2" 
               alt="Foto de Tomás Britos"
-              src={`${import.meta.env.BASE_URL}images/profile_pic.webp`} />
+              src={`${import.meta.env.BASE_URL}images/profile_pic.webp`} 
+              loading="lazy"
+            />
           </motion.div>
           <motion.div 
             className="space-y-6"
