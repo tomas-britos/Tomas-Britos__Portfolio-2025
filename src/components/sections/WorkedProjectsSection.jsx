@@ -45,8 +45,8 @@ const workedProjects = [
     link: "https://www.bajocerohelados.com.ar",
   },
   {
-    name: "Entre otros ...",
-    
+    name: "Entre otros...",
+    link: "#",
   },
 ];
 
