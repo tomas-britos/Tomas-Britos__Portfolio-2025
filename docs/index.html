@@ -19,7 +19,7 @@
 		<meta name="theme-color" content="#6366f1" />
 		<meta name="color-scheme" content="dark light" />
 		<title>Frontend Developer - Tomás Britos</title>
-		<script type="module" crossorigin src="/Tomas-Britos__Portfolio-2025/assets/index-a628261b.js"></script>
+		<script type="module" crossorigin src="/Tomas-Britos__Portfolio-2025/assets/index-d7d0db28.js"></script>
 		<link rel="stylesheet" href="/Tomas-Britos__Portfolio-2025/assets/index-520cdff1.css">
 		<script type="module">
 window.onerror = (message, source, lineno, colno, errorObj) => {
@@ -88,10 +88,7 @@ function handleViteOverlay(node) {
 		<script type="module">
 const originalConsoleError = console.error;
 console.error = function(...args) {
-	// Solo mostrar errores en consola si NO estamos en producción
-	if (location.hostname === 'localhost' || location.hostname === '127.0.0.1') {
-		originalConsoleError.apply(console, args);
-	}
+	originalConsoleError.apply(console, args);
 
 	let errorString = '';
 
@@ -113,7 +110,7 @@ console.error = function(...args) {
 	}, '*');
 };
 </script>
-<script type="module">
+		<script type="module">
 const originalFetch = window.fetch;
 
 window.fetch = function(...args) {
@@ -134,23 +131,17 @@ window.fetch = function(...args) {
 				contentType.includes('application/xhtml+xml');
 
 			if (!response.ok && !isDocumentResponse) {
-				const responseClone = response.clone();
-				const errorFromRes = await responseClone.text();
-				const requestUrl = response.url;
-				// Solo mostrar errores en consola si NO estamos en producción
-				if (location.hostname === 'localhost' || location.hostname === '127.0.0.1') {
+					const responseClone = response.clone();
+					const errorFromRes = await responseClone.text();
+					const requestUrl = response.url;
 					console.error(`Fetch error from ${requestUrl}: ${errorFromRes}`);
-				}
 			}
 
 			return response;
 		})
 		.catch(error => {
 			if (!url.match(/.html?$/i)) {
-				// Solo mostrar errores en consola si NO estamos en producción
-				if (location.hostname === 'localhost' || location.hostname === '127.0.0.1') {
-					console.error(error);
-				}
+				console.error(error);
 			}
 
 			throw error;
