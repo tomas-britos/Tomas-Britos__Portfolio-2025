@@ -1,0 +1,21 @@
+{
+  "name": "Tomás Britos Portfolio",
+  "short_name": "Portfolio",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#18181b",
+  "theme_color": "#6366f1",
+  "description": "Portfolio de Tomás Britos, desarrollador frontend especializado en UX/UI.",
+  "icons": [
+    {
+      "src": "/public/images/profile_pic.webp",
+      "sizes": "192x192",
+      "type": "image/webp"
+    },
+    {
+      "src": "/public/images/profile_pic.webp",
+      "sizes": "512x512",
+      "type": "image/webp"
+    }
+  ]
+}
