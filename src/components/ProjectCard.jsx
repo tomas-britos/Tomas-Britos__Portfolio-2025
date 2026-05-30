@@ -4,8 +4,6 @@ import { toast } from '@/components/ui/use-toast';
 import { ExternalLink, Briefcase } from 'lucide-react';
 
 const ProjectCard = ({ title, description, tech, delay = 0, category, link }) => {
-  
-
   return (
     <motion.div
       initial={{ opacity: 0, y: 50, scale: 0.95 }}

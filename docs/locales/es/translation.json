@@ -1,0 +1,85 @@
+{
+  "hero": {
+    "greeting": "Hola, soy",
+    "name": "Tomás Britos",
+    "role": "Semi-senior Frontend Developer & UX/UI Designer",
+    "description": "Con +{{experience}} años de experiencia, transformo ideas digitales en interfaces de usuario intuitivas, accesibles e impactantes. Especialista en Scss y Figma.",
+    "cta": "Contáctame",
+    "downloadCv": "Descargar CV"
+  },
+  "about": {
+    "stats": {
+      "experience": "Años de Experiencia",
+      "projects": "Proyectos trabajados",
+      "designValue": "Diseño especializado",
+      "designLabel": "en el Usuario"
+    },
+    "heading": "Sobre mí",
+    "p1": "Soy un desarrollador Frontend Semi-Senior experimentado en creación de interfaces de usuario para todo tipo de sitios web. Apasionado por el UX Writing y la búsqueda de <1>equitatividad</1> mediante código eficiente, con el fin de entregar productos digitales de alta accesibilidad e intuitividad.",
+    "p2": "Mi trayectoria se desarrolló trabajando mayormente en proyectos E-Commerce B2B, tanto freelance como empleado para una empresa. Disfruto trabajando en equipo e iterando grupalmente para lograr la mejor solución posible. Creo que la diversidad es el punto clave en la creación de soluciones digitales equitativas y funcionales.",
+    "p3": "Entendiendo el contexto global y priorizando el diseño responsivo busco constantemente optimizar la experiencia del usuario a través de textos claros, performance web y accesibilidad. Mi objetivo es construir aplicaciones que no solo se vean bien, sino que también sean cómodas de usar."
+  },
+  "skills": {
+    "heading": "Mis habilidades",
+    "subtitle": "Tecnologías y herramientas que utilizo en mi día a día.",
+    "items": {
+      "htmlCss": { "title": "HTML & CSS/SCSS", "desc": "Maquetación semántica, responsive design, preprocesadores CSS." },
+      "jsReact": { "title": "JavaScript & React", "desc": "ES6+, DOM, componentes, estado, hooks, Redux/Context API." },
+      "uxUi": { "title": "Diseño UX/UI & Figma", "desc": "Prototipado, wireframing, user flows, diseño de interfaces." },
+      "ror": { "title": "Ruby on Rails (Básico)", "desc": "Conceptos MVC, REST APIs, ActiveRecord." },
+      "git": { "title": "Control de Versiones", "desc": "Git, GitHub, branching, pull requests." },
+      "tools": { "title": "Herramientas & Metodologías", "desc": "Webpack, npm/yarn, Agile, Scrum, Bem." }
+    }
+  },
+  "projects": {
+    "heading": "Proyectos personales destacados",
+    "subtitle": "Una selección de proyectos donde he aplicado mis habilidades como desarrollador e implementador Frontend y UX/UI.",
+    "items": {
+      "workvalue": { "desc": "Calculadora interactiva del valor real de tu hora de trabajo. Ingresá tu salario mensual, configurá tu horario y descubrí cuánto vale cada hora. Calendario interactivo, bilingüe ES/EN.", "category": "Web App" },
+      "coffeeshop": { "desc": "Coming Soon de una cafetería de especialidad con alma retro. Landing page animada con Next.js, diseño acogedor y personalidad de marca.", "category": "Landing Page" },
+      "inergio": { "desc": "Desarrollo frontend completo para una web de servicios de refrigeración y mantenimiento. Desempeñé el rol de líder del equipo de prototipado y diseño UX/UI.", "category": "Business Website" },
+      "prototype": { "desc": "Prototipo utilizable de web centrada en la creación de presupuestos y reservas de alquiler de productos varios. Vistas de usuario y administrador.", "category": "Prototype" }
+    }
+  },
+  "workedProjects": {
+    "heading": "Proyectos donde participé",
+    "description": "Dado que mi carrera comenzó directamente en una empresa, he tenido la oportunidad de participar en una amplia variedad de proyectos. Mi aporte fue principalmente en diseño, prototipado y fixes visuales. Estos son algunos de ellos:",
+    "amongOthers": "Entre otros..."
+  },
+  "contact": {
+    "successHeading": "¡Mensaje enviado!",
+    "successText": "¡Gracias por contactarme! Te responderé pronto.",
+    "heading": "Ponte en contacto",
+    "description": "¿Estás interesado en colaborar o tienes alguna pregunta? No dudes en contactarme.",
+    "form": {
+      "name": "Nombre",
+      "namePlaceholder": "Tu Nombre",
+      "email": "Email",
+      "emailPlaceholder": "tu@email.com",
+      "message": "Mensaje",
+      "messagePlaceholder": "Tu mensaje...",
+      "sending": "Enviando...",
+      "send": "Enviar Mensaje"
+    },
+    "toast": {
+      "title": "Reintentando dirigirte a {{platform}}...",
+      "description": "⏰ Esto podría tardar unos segundos, por favor espera. 🙏"
+    },
+    "tooltips": {
+      "linkedin": "Ir a mi perfil de LinkedIn",
+      "github": "Ir a mi perfil de GitHub",
+      "email": "Contactarme por tu mailer",
+      "home": "Ir al inicio"
+    }
+  },
+  "footer": {
+    "copyright": "© {{year}} Tomás Britos. Todos los derechos reservados.",
+    "credit": "Diseñado con React y Tailwind CSS. Maquetado con IA:"
+  },
+  "meta": {
+    "title": "Frontend Developer - Tomás Britos",
+    "description": "Portfolio de Tomás Britos, desarrollador frontend especializado en UX/UI. Experto en React, TypeScript y diseño de experiencias digitales únicas. Descubre proyectos, habilidades y contacto.",
+    "ogTitle": "Frontend Developer - Tomás Britos",
+    "ogDescription": "Portfolio de Tomás Britos, desarrollador frontend especializado en UX/UI. Experto en React, TypeScript y diseño de experiencias digitales únicas."
+  }
+}

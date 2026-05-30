@@ -1,19 +1,16 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 import AnimatedSection from '@/components/AnimatedSection';
 import SkillCard from '@/components/SkillCard';
 import { Code, Layers, PenTool, Database, GitMerge, Settings } from 'lucide-react';
 
-const skillsData = [
-  { icon: Code, title: "HTML & CSS/SCSS", description: "Maquetación semántica, responsive design, preprocesadores CSS.", delay: 0 },
-  { icon: Layers, title: "JavaScript & React", description: "ES6+, DOM, componentes, estado, hooks, Redux/Context API.", delay: 0.1 },
-  { icon: PenTool, title: "Diseño UX/UI & Figma", description: "Prototipado, wireframing, user flows, diseño de interfaces.", delay: 0.2 },
-  { icon: Database, title: "Ruby on Rails (Básico)", description: "Conceptos MVC, REST APIs, ActiveRecord.", delay: 0.3 },
-  { icon: GitMerge, title: "Control de Versiones", description: "Git, GitHub, branching, pull requests.", delay: 0.4 },
-  { icon: Settings, title: "Herramientas & Metodologías", description: "Webpack, npm/yarn, Agile, Scrum, Bem.", delay: 0.5 },
-];
+const SKILL_KEYS = ['htmlCss', 'jsReact', 'uxUi', 'ror', 'git', 'tools'];
+const SKILL_ICONS = [Code, Layers, PenTool, Database, GitMerge, Settings];
 
 const SkillsSection = () => {
+  const { t } = useTranslation();
+
   return (
     <AnimatedSection className="section-padding px-4 bg-background/70" id="skills">
       <div className="max-w-5xl mx-auto">
@@ -23,7 +20,7 @@ const SkillsSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.1 }}
         >
-          <span className="text-gradient-secondary">Mis habilidades</span>
+          <span className="text-gradient-secondary">{t('skills.heading')}</span>
         </motion.h2>
         <motion.p 
           className="text-lg text-muted-foreground text-center mb-12 max-w-2xl mx-auto font-body"
@@ -31,17 +28,17 @@ const SkillsSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
         >
-          Tecnologías y herramientas que utilizo en mi día a día.
+          {t('skills.subtitle')}
         </motion.p>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {skillsData.map((skill) => (
+          {SKILL_KEYS.map((key, i) => (
             <SkillCard
-              key={skill.title}
-              icon={skill.icon}
-              title={skill.title}
-              description={skill.description}
-              delay={0.3 + skill.delay}
+              key={key}
+              icon={SKILL_ICONS[i]}
+              title={t(`skills.items.${key}.title`)}
+              description={t(`skills.items.${key}.desc`)}
+              delay={0.3 + i * 0.1}
             />
           ))}
         </div>

@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
 import AnimatedSection from "@/components/AnimatedSection";
 import { Button } from "@/components/ui/button";
 import { toast } from "@/components/ui/use-toast";
@@ -7,7 +8,9 @@ import { Mail, Linkedin, Github, Send, Home } from "lucide-react";
 import { useForm, ValidationError } from "@formspree/react";
 
 const ContactSection = () => {
+  const { t } = useTranslation();
   const [state, handleSubmit] = useForm("mldnlbee");
+
   const handleSocialClick = (platform) => {
     let url = null;
     if (platform === "LinkedIn") {
@@ -19,9 +22,8 @@ const ContactSection = () => {
       window.open(url, "_blank");
     } else {
       toast({
-        title: `Reintentando dirigirte a ${platform}...`,
-        description:
-          "⏰ Esto podria tardar unos segundos, por favor espera. 🙏",
+        title: t('contact.toast.title', { platform }),
+        description: t('contact.toast.description'),
         variant: "default",
       });
     }
@@ -37,7 +39,7 @@ const ContactSection = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.1 }}
           >
-            <span className="text-gradient-secondary">¡Mensaje enviado!</span>
+            <span className="text-gradient-secondary">{t('contact.successHeading')}</span>
           </motion.h2>
           <motion.p
             className="text-lg text-muted-foreground mb-12 font-body"
@@ -45,7 +47,7 @@ const ContactSection = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
           >
-            ¡Gracias por contactarme! Te responderé pronto.
+            {t('contact.successText')}
           </motion.p>
         </div>
       </AnimatedSection>
@@ -61,7 +63,7 @@ const ContactSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.1 }}
         >
-          <span className="text-gradient-secondary">Ponte en contacto</span>
+          <span className="text-gradient-secondary">{t('contact.heading')}</span>
         </motion.h2>
         <motion.p
           className="text-lg text-muted-foreground mb-12 font-body"
@@ -69,8 +71,7 @@ const ContactSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
         >
-          ¿Estás interesado en colaborar o tienes alguna pregunta? No dudes en
-          contactarme.
+          {t('contact.description')}
         </motion.p>
 
         <motion.form
@@ -86,7 +87,7 @@ const ContactSection = () => {
                 htmlFor="name"
                 className="block text-sm font-medium text-foreground mb-1"
               >
-                Nombre
+                {t('contact.form.name')}
               </label>
               <input
                 type="text"
@@ -94,10 +95,10 @@ const ContactSection = () => {
                 id="name"
                 required
                 className="w-full px-4 py-2.5 bg-input border border-border rounded-md focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all"
-                placeholder="Tu Nombre"
+                placeholder={t('contact.form.namePlaceholder')}
               />
               <ValidationError
-                prefix="Nombre"
+                prefix={t('contact.form.name')}
                 field="name"
                 errors={state.errors}
               />
@@ -107,7 +108,7 @@ const ContactSection = () => {
                 htmlFor="email"
                 className="block text-sm font-medium text-foreground mb-1"
               >
-                Email
+                {t('contact.form.email')}
               </label>
               <input
                 type="email"
@@ -115,10 +116,10 @@ const ContactSection = () => {
                 id="email"
                 required
                 className="w-full px-4 py-2.5 bg-input border border-border rounded-md focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all"
-                placeholder="tu@email.com"
+                placeholder={t('contact.form.emailPlaceholder')}
               />
               <ValidationError
-                prefix="Email"
+                prefix={t('contact.form.email')}
                 field="email"
                 errors={state.errors}
               />
@@ -129,7 +130,7 @@ const ContactSection = () => {
               htmlFor="message"
               className="block text-sm font-medium text-foreground mb-1"
             >
-              Mensaje
+              {t('contact.form.message')}
             </label>
             <textarea
               name="message"
@@ -137,10 +138,10 @@ const ContactSection = () => {
               rows="4"
               required
               className="w-full px-4 py-2.5 bg-input border border-border rounded-md focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all"
-              placeholder="Tu mensaje..."
+              placeholder={t('contact.form.messagePlaceholder')}
             ></textarea>
             <ValidationError
-              prefix="Mensaje"
+              prefix={t('contact.form.message')}
               field="message"
               errors={state.errors}
             />
@@ -156,7 +157,7 @@ const ContactSection = () => {
             disabled={state.submitting}
           >
             <Send className="w-5 h-5 mr-2.5" />
-            {state.submitting ? "Enviando..." : "Enviar Mensaje"}
+            {state.submitting ? t('contact.form.sending') : t('contact.form.send')}
           </motion.button>
         </motion.form>
 
@@ -171,7 +172,7 @@ const ContactSection = () => {
             variant="outline"
             size="icon"
             className="glassmorphism glassmorphism-hover p-3 w-12 h-12 rounded-full border-border/50 hover:border-primary/50 group"
-            title="Ir a mi perfil de LinkedIn"
+            title={t('contact.tooltips.linkedin')}
           >
             <Linkedin className="w-5 h-5 text-muted-foreground group-hover:text-primary transition-colors" />
           </Button>
@@ -180,7 +181,7 @@ const ContactSection = () => {
             variant="outline"
             size="icon"
             className="glassmorphism glassmorphism-hover p-3 w-12 h-12 rounded-full border-border/50 hover:border-secondary/50 group"
-            title="Ir a mi perfil de GitHub"
+            title={t('contact.tooltips.github')}
           >
             <Github className="w-5 h-5 text-muted-foreground group-hover:text-secondary transition-colors" />
           </Button>
@@ -189,7 +190,7 @@ const ContactSection = () => {
             variant="outline"
             size="icon"
             className="glassmorphism glassmorphism-hover p-3 w-12 h-12 rounded-full border-border/50 hover:border-accent/50 group"
-            title="Contactarme por tu mailer"
+            title={t('contact.tooltips.email')}
           >
             <Mail className="group-hover:text-primary h-5 text-muted-foreground transition-colors w-5" />
           </Button>
@@ -198,7 +199,7 @@ const ContactSection = () => {
             variant="outline"
             size="icon"
             className="glassmorphism glassmorphism-hover p-3 w-12 h-12 rounded-full border-border/50 hover:border-primary/50 group"
-            title="Ir al inicio"
+            title={t('contact.tooltips.home')}
           >
             <Home className="w-5 h-5 text-muted-foreground group-hover:text-primary transition-colors" />
           </Button>
