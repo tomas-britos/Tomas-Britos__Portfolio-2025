@@ -1,0 +1,85 @@
+{
+  "hero": {
+    "greeting": "Hi, I'm",
+    "name": "Tomás Britos",
+    "role": "Semi-senior Frontend Developer & UX/UI Designer",
+    "description": "With +{{experience}} years of experience, I transform digital ideas into intuitive, accessible, and impactful user interfaces. Specialist in Scss and Figma.",
+    "cta": "Contact me",
+    "downloadCv": "Download CV"
+  },
+  "about": {
+    "stats": {
+      "experience": "Years of Experience",
+      "projects": "Projects worked on",
+      "designValue": "User-centered",
+      "designLabel": "Design"
+    },
+    "heading": "About me",
+    "p1": "I am a Semi-Senior Frontend Developer experienced in creating user interfaces for all kinds of websites. Passionate about UX Writing and pursuing <1>equitability</1> through efficient code, aiming to deliver highly accessible and intuitive digital products.",
+    "p2": "My career has mostly developed working on B2B E-Commerce projects, both as a freelancer and as an employee for a company. I enjoy working in teams and iterating together to achieve the best possible solution. I believe diversity is the key point in creating equitable and functional digital solutions.",
+    "p3": "Understanding the global context and prioritizing responsive design, I constantly seek to optimize user experience through clear copy, web performance, and accessibility. My goal is to build applications that not only look good but are also comfortable to use."
+  },
+  "skills": {
+    "heading": "My skills",
+    "subtitle": "Technologies and tools I use on a daily basis.",
+    "items": {
+      "htmlCss": { "title": "HTML & CSS/SCSS", "desc": "Semantic markup, responsive design, CSS preprocessors." },
+      "jsReact": { "title": "JavaScript & React", "desc": "ES6+, DOM, components, state, hooks, Redux/Context API." },
+      "uxUi": { "title": "UX/UI Design & Figma", "desc": "Prototyping, wireframing, user flows, interface design." },
+      "ror": { "title": "Ruby on Rails (Basic)", "desc": "MVC concepts, REST APIs, ActiveRecord." },
+      "git": { "title": "Version Control", "desc": "Git, GitHub, branching, pull requests." },
+      "tools": { "title": "Tools & Methodologies", "desc": "Webpack, npm/yarn, Agile, Scrum, Bem." }
+    }
+  },
+  "projects": {
+    "heading": "Featured personal projects",
+    "subtitle": "A selection of projects where I've applied my skills as a Frontend developer and UX/UI implementer.",
+    "items": {
+      "workvalue": { "desc": "Interactive calculator for the real value of your work hour. Enter your monthly salary, set your schedule, and discover how much each hour is worth. Interactive calendar, bilingual ES/EN.", "category": "Web App" },
+      "coffeeshop": { "desc": "Coming Soon for a specialty coffee shop with a retro soul. Animated landing page built with Next.js, cozy design, and brand personality.", "category": "Landing Page" },
+      "inergio": { "desc": "Complete frontend development for a refrigeration and maintenance services website. Served as team leader for prototyping and UX/UI design.", "category": "Business Website" },
+      "prototype": { "desc": "Usable prototype of a web app focused on creating budgets and reservations for various product rentals. User and admin views.", "category": "Prototype" }
+    }
+  },
+  "workedProjects": {
+    "heading": "Projects I participated in",
+    "description": "Since my career started directly in a company, I've had the opportunity to participate in a wide variety of projects. My contribution was mainly in design, prototyping, and visual fixes. Here are some of them:",
+    "amongOthers": "Among others..."
+  },
+  "contact": {
+    "successHeading": "Message sent!",
+    "successText": "Thank you for reaching out! I'll get back to you soon.",
+    "heading": "Get in touch",
+    "description": "Are you interested in collaborating or do you have any questions? Feel free to contact me.",
+    "form": {
+      "name": "Name",
+      "namePlaceholder": "Your Name",
+      "email": "Email",
+      "emailPlaceholder": "you@email.com",
+      "message": "Message",
+      "messagePlaceholder": "Your message...",
+      "sending": "Sending...",
+      "send": "Send Message"
+    },
+    "toast": {
+      "title": "Trying to redirect you to {{platform}}...",
+      "description": "⏰ This might take a few seconds, please wait. 🙏"
+    },
+    "tooltips": {
+      "linkedin": "Go to my LinkedIn profile",
+      "github": "Go to my GitHub profile",
+      "email": "Contact me via email",
+      "home": "Go to top"
+    }
+  },
+  "footer": {
+    "copyright": "© {{year}} Tomás Britos. All rights reserved.",
+    "credit": "Built with React and Tailwind CSS. Layout by AI:"
+  },
+  "meta": {
+    "title": "Frontend Developer - Tomás Britos",
+    "description": "Portfolio of Tomás Britos, frontend developer specialized in UX/UI. Expert in React, TypeScript, and unique digital experience design. Discover projects, skills, and contact.",
+    "ogTitle": "Frontend Developer - Tomás Britos",
+    "ogDescription": "Portfolio of Tomás Britos, frontend developer specialized in UX/UI. Expert in React, TypeScript, and unique digital experience design."
+  }
+}

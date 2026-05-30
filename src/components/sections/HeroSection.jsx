@@ -2,20 +2,23 @@ import React from "react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Mail, Download, ArrowDown } from "lucide-react";
-import { toast } from "@/components/ui/use-toast";
+import { useTranslation } from "react-i18next";
+import LanguageToggle from "@/components/LanguageToggle";
 
 const HeroSection = () => {
+  const { t } = useTranslation();
+
   const handleContactClick = () => {
     document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" });
   };
 
   const handleDownloadCV = () => {
-    toast({
-      title: "🚧 Descarga de CV no implementada",
-      description:
-        "¡Pero no te preocupes! Puedes solicitar esta funcionalidad. 🚀",
-      variant: "default",
-    });
+    const link = document.createElement("a");
+    link.href = "/TomasBritos_FrontendDev_CV_2026.pdf";
+    link.download = "TomasBritos_FrontendDev_CV_2026.pdf";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
   };
 
   const containerVariants = {
@@ -38,16 +41,15 @@ const HeroSection = () => {
     },
   };
 
-  const AnosExperiencia = () => {
-    const year = new Date().getFullYear();
-    return <>{year - 2021}</>;
-  };
+  const experienceYears = new Date().getFullYear() - 2021;
 
   return (
     <section
       className="relative min-h-screen flex items-center justify-center px-4 section-padding overflow-hidden"
       id="home"
     >
+      <LanguageToggle className="absolute top-6 right-6 z-20" />
+
       <motion.div
         variants={containerVariants}
         initial="hidden"
@@ -59,24 +61,23 @@ const HeroSection = () => {
           className="text-5xl md:text-7xl font-heading mb-4"
         >
           <span className="block mb-2 text-muted-foreground font-normal text-2xl md:text-3xl">
-            Hola, soy
+            {t('hero.greeting')}
           </span>
-          <span className="text-gradient-primary">Tomás Britos</span>
+          <span className="text-gradient-primary">{t('hero.name')}</span>
         </motion.h1>
 
         <motion.p
           variants={itemVariants}
           className="text-xl md:text-2xl text-foreground font-subheading mb-8"
         >
-          Semi-senior Frontend Developer & UX/UI Designer
+          {t('hero.role')}
         </motion.p>
 
         <motion.p
           variants={itemVariants}
           className="text-md md:text-lg text-muted-foreground mb-10 leading-relaxed font-body"
         >
-          Con <AnosExperiencia /> años de experiencia,
-          transformo ideas digitales en interfaces de usuario intuitivas, accesibles e impactantes. Especializado en Scss y Figma.
+          {t('hero.description', { experience: experienceYears })}
         </motion.p>
 
         <motion.div
@@ -93,18 +94,16 @@ const HeroSection = () => {
             role="button"
           >
             <Mail className="w-5 h-5 mr-2.5" />
-            Contáctame
+            {t('hero.cta')}
           </motion.a>
           <Button
             onClick={handleDownloadCV}
-            variant="outline"
-            className="text-foreground border-border/70 hover:bg-foreground/5 hover:border-primary font-semibold py-3 px-8 rounded-md transition-all duration-300 text-base glassmorphism glassmorphism-hover"
+            variant="ghost"
+            className="text-foreground border-border/70 hover:bg-foreground/5 hover:border-primary hover:text-foreground font-semibold py-3 px-8 rounded-md transition-all duration-300 text-base glassmorphism glassmorphism-hover"
             size="lg"
-            disabled="true" // Disable until implemented
-            style={{ cursor: "not-allowed" }}
           >
             <Download className="w-5 h-5 mr-2.5" />
-            Descargar CV
+            {t('hero.downloadCv')}
           </Button>
         </motion.div>
       </motion.div>
@@ -123,7 +122,7 @@ const HeroSection = () => {
             const el = document.getElementById("about");
             if (el) {
               const y = el.getBoundingClientRect().top + window.scrollY - 
-              140; // offset mayor para dejar el título más arriba
+              140;
               window.scrollTo({ top: y, behavior: "smooth" });
             }
           }}

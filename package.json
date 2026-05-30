@@ -23,9 +23,13 @@
 		"class-variance-authority": "^0.7.0",
 		"clsx": "^2.0.0",
 		"framer-motion": "^10.16.4",
+		"i18next": "^26.3.0",
+		"i18next-browser-languagedetector": "^8.2.1",
 		"lucide-react": "^0.285.0",
 		"react": "^18.2.0",
 		"react-dom": "^18.2.0",
+		"react-helmet-async": "^3.0.0",
+		"react-i18next": "^17.0.8",
 		"tailwind-merge": "^1.14.0",
 		"tailwindcss-animate": "^1.0.7"
 	},
